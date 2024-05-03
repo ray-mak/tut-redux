@@ -4,6 +4,9 @@ import App from './App.jsx'
 import './index.css'
 import { store } from './app/store.jsx'
 import { Provider } from 'react-redux'
+import { fetchUsers } from './features/users/usersSlice.jsx'
+
+store.dispatch(fetchUsers()) //we want to fetchUsers right when the app loads
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
